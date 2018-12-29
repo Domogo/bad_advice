@@ -1,0 +1,25 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'anyAdvice/style.css' %}">
+
+<html>
+    <head>
+        <title>AnyAdvice:All Advice</title>
+    </head>
+    <body bgcolor="#{{ color }}">
+        <a href="/"><p class="links">Homepage.</p></a>
+        <a href="/rand"><p class="links">Random Advice.</p></a>
+
+        {% if allAdvice %}
+            {% for advice in allAdvice %}
+                <div class="all_window">
+                    <p class="all_advice">{{advice.advice}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% if error %}
+            <p class="advice">{{error}}</p>
+        {% endif %}  
+    </body>
+</html>

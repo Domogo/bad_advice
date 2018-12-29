@@ -1,0 +1,23 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'anyAdvice/style.css' %}">
+
+<html>
+    <head>
+        <title>AnyAdvice:Home</title>
+    </head>
+    <body bgcolor="#{{ color }}">
+        <a href="/"><p class="links">Homepage.</p></a>
+        <a href="/all"><p class="links">All Advice.</p></a>
+
+        <div class="window">
+            {% if randAdvice %}
+                <p class="advice">{{randAdvice.advice}}</p>
+            {% endif %}
+        </div>
+
+        {% if error %}
+            <p class="advice">{{error}}</p>
+        {% endif %} 
+    </body>
+</html>

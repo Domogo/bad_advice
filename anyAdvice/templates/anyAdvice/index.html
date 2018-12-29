@@ -1,0 +1,23 @@
+{% load static %}
+
+
+<html>
+    <head>
+        <title>AnyAdvice:Home</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'anyAdvice/style.css' %}">
+        <meta http-equiv="refresh" content="30"/>
+    </head>
+    <body bgcolor='#{{color}}'>
+        <a href="/all"><p class="links">All Advice.</p></a>
+        <a href="/rand"><p class="links">Random Advice.</p></a>
+        <div class="window">
+            {% if advice %}
+                <p class="advice">{{advice.advice}} <p>
+            {% endif %}
+        </div>
+
+        {% if error %}
+            <p class="advice">{{error}} <p>
+        {% endif %}        
+    </body>
+</html>
