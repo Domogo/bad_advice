@@ -2,6 +2,8 @@
 
 Simple Django + Python3 app that works with Advice Slip API <https://api.adviceslip.com/>
 
+Not all advice is good advice. (In fact, this one might be one of the few good ones on this app).
+
 # Setup:
 
   - create a virtualenv and activate it
